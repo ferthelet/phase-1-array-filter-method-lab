@@ -11,10 +11,12 @@ function findMatching(drivers, name) {
     return drivers.filter((driver) => driver.toLowerCase() === name.toLowerCase());
 }
 
-function fuzzyMatch() {
+function fuzzyMatch(drivers, name) {
     // takes an array of drivers' names and a string as arguments
     // for querying the array, and returns all drivers whose names
     // begin with the provided letters.
+    debugger;
+    return drivers.filter((driver) => driver.slice(0, name.length) === name);
 }
 
 function matchName() {
@@ -27,4 +29,5 @@ function matchName() {
 
 // sample
 drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
-console.log(findMatching(drivers, 'Bobby'));
+drivers.push('Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'bobby');
+console.log(fuzzyMatch(drivers, 'Bobby'));
