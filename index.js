@@ -15,7 +15,7 @@ function fuzzyMatch(drivers, name) {
     // takes an array of drivers' names and a string as arguments
     // for querying the array, and returns all drivers whose names
     // begin with the provided letters.
-    return drivers.filter((driver) => driver.slice(0, name.length) === name);
+    return drivers.filter((driver) => driver.startsWith(name));
 }
 
 function matchName(drivers, string) {
