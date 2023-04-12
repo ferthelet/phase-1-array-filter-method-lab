@@ -15,19 +15,14 @@ function fuzzyMatch(drivers, name) {
     // takes an array of drivers' names and a string as arguments
     // for querying the array, and returns all drivers whose names
     // begin with the provided letters.
-    debugger;
     return drivers.filter((driver) => driver.slice(0, name.length) === name);
 }
 
-function matchName() {
+function matchName(drivers, string) {
     // takes an array of driver objects and a string as arguments.
     // Each driver object has two properties: name and hometown. The
     // function should return each element whose name property 
     // matches the provided string argument.
-
+    return drivers.filter((driver) => driver.name === string);
 }
 
-// sample
-drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
-drivers.push('Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'bobby');
-console.log(fuzzyMatch(drivers, 'Bobby'));
