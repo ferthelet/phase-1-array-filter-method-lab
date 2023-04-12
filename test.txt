@@ -1,0 +1,73 @@
+
+> js-variables-lab@0.1.0 test
+> mocha --timeout 5000 -R mocha-multi --reporter-options spec=-,json=.results.json
+
+
+
+  index.js
+    findMatching()
+      1) returns all drivers that match the passed in name
+      2) returns matching drivers if case does not match but letters do
+      3) returns an empty array if there is no match
+    fuzzyMatch()
+      4) returns a driver if beginning provided letters match
+      5) does not return drivers if only middle or ending letters match
+      6) does not return drivers if only middle or ending letters match
+    matchName()
+      7) accesses the data structure to check if name matches
+
+
+  0 passing (245ms)
+  7 failing
+
+  1) index.js
+       findMatching()
+         returns all drivers that match the passed in name:
+     AssertionError: expected undefined to deeply equal [ 'Bobby', 'Bobby' ]
+      at Context.<anonymous> (test/indexTest.js:10:49)
+      at process.processImmediate (node:internal/timers:476:21)
+
+  2) index.js
+       findMatching()
+         returns matching drivers if case does not match but letters do:
+     AssertionError: expected undefined to deeply equal [ 'Bobby', 'bobby' ]
+      at Context.<anonymous> (test/indexTest.js:17:49)
+      at process.processImmediate (node:internal/timers:476:21)
+
+  3) index.js
+       findMatching()
+         returns an empty array if there is no match:
+     AssertionError: expected undefined to deeply equal []
+      at Context.<anonymous> (test/indexTest.js:23:49)
+      at process.processImmediate (node:internal/timers:476:21)
+
+  4) index.js
+       fuzzyMatch()
+         returns a driver if beginning provided letters match:
+     AssertionError: expected undefined to be an array
+      at Context.<anonymous> (test/indexTest.js:37:49)
+      at process.processImmediate (node:internal/timers:476:21)
+
+  5) index.js
+       fuzzyMatch()
+         does not return drivers if only middle or ending letters match:
+     AssertionError: expected undefined to be an array
+      at Context.<anonymous> (test/indexTest.js:41:48)
+      at process.processImmediate (node:internal/timers:476:21)
+
+  6) index.js
+       fuzzyMatch()
+         does not return drivers if only middle or ending letters match:
+     AssertionError: expected undefined to be an array
+      at Context.<anonymous> (test/indexTest.js:45:49)
+      at process.processImmediate (node:internal/timers:476:21)
+
+  7) index.js
+       matchName()
+         accesses the data structure to check if name matches:
+     AssertionError: expected undefined to deeply equal [ Array(2) ]
+      at Context.<anonymous> (test/indexTest.js:69:46)
+      at process.processImmediate (node:internal/timers:476:21)
+
+
+
