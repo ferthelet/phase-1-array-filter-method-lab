@@ -4,10 +4,11 @@
 // write functions using the filter() method so that PickMeUp Taxi
 // service employees can easily query the data.
 
-function findMatching() {
+function findMatching(drivers, name) {
     // takes an array of drivers' names and a string as arguments,
     // and returns the matching list of drivers. The function should 
     // be case insensitive.
+    return drivers.filter((driver) => driver.toLowerCase() === name.toLowerCase());
 }
 
 function fuzzyMatch() {
@@ -24,3 +25,6 @@ function matchName() {
 
 }
 
+// sample
+drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
+console.log(findMatching(drivers, 'Bobby'));
